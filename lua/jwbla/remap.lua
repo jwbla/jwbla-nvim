@@ -12,3 +12,5 @@ vim.api.nvim_set_keymap("n", "<M-.>", "<c-w>5>", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "<M-t>", "<C-W>+", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<M-s>", "<C-W>-", { noremap = true, silent = true })
 
+-- This is just for fun
+vim.api.nvim_set_keymap("n", "<leader>fu", "<cmd>CellularAutomaton make_it_rain<CR>", { noremap = true, silent = true})

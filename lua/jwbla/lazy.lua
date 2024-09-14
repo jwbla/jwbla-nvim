@@ -37,12 +37,14 @@ vim.g.maplocalleader = " "
 --- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 return require('lazy').setup({
+    install = { colorscheme = { "catppuccin" } },
     "catppuccin/nvim",
     'nvim-treesitter/playground',
     'mbbill/undotree',
     'tpope/vim-fugitive',
     'github/copilot.vim',
     'norcalli/nvim-colorizer.lua',
+    'eandrju/cellular-automaton.nvim',
 --    use( 'nvim-tree/nvim-tree.lua' )
 --    use( 'nvim-tree/nvim-web-devicons' )
     {
@@ -73,7 +75,6 @@ return require('lazy').setup({
             {'rafamadriz/friendly-snippets'},
         }
     },
-   install = { colorscheme = { "catppuccin" } },
    -- automatically check for plugin updates
    checker = { enabled = true },
 })
