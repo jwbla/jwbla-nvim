@@ -3,6 +3,7 @@ require("jwbla.set")
 require("jwbla.lazy")
 vim.cmd.colorscheme "catppuccin-mocha"
 
+require 'colorizer'.setup()
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd('LspAttach', {
