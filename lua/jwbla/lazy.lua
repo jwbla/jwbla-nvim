@@ -25,13 +25,7 @@ return require('lazy').setup({
     },
     checker = { enabled = true },
     change_detection = { notify = false },
-    'nvim-treesitter/playground',
-    'mbbill/undotree',
-    'tpope/vim-fugitive',
-    'github/copilot.vim',
     'norcalli/nvim-colorizer.lua',
-    'eandrju/cellular-automaton.nvim',
 --    use( 'nvim-tree/nvim-tree.lua' )
 --    use( 'nvim-tree/nvim-web-devicons' )
-    'nvim-treesitter/nvim-treesitter',
 })
