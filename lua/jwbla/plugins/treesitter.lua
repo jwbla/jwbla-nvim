@@ -1,6 +1,6 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    "nvim-treesitter/playground",
+    lazy = false,
     build = ":TSUpdate",
     config = function()
         require("nvim-treesitter.configs").setup({
@@ -20,8 +20,8 @@ return {
                 "markdown",
             },
 
-          sync_install = false,
-          auto_install = true,
+            sync_install = false,
+            auto_install = true,
             highlight = {
                 enable = true,
                 additional_vim_regex_highlighting = false,

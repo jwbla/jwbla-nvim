@@ -25,7 +25,6 @@ return require('lazy').setup({
     },
     checker = { enabled = true },
     change_detection = { notify = false },
-    'norcalli/nvim-colorizer.lua',
 --    use( 'nvim-tree/nvim-tree.lua' )
 --    use( 'nvim-tree/nvim-web-devicons' )
 })
