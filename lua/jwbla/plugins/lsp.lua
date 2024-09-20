@@ -28,15 +28,15 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "clangd",
-                "json-lsp",
-                "html-lsp",
+                "jsonls",
+                "html",
                 "glsl_analyzer",
-                "typescript-language-server",
+                "ts_ls",
                 "gopls",
-                "yaml-language-server",
-                "bash-language-server",
-                "sqls",
-                "cmake-language-server"
+                "yamlls",
+                "bashls",
+                "sqlls",
+                "cmake"
 
             },
             handlers = {
