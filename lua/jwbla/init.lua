@@ -23,3 +23,30 @@ autocmd('LspAttach', {
     end
 })
 
+vim.cmd([[
+function! ClearYankRegisters()
+    " Clear alphabetic registers a to z
+    for i in range(char2nr('a'), char2nr('z'))
+        execute 'let @' . nr2char(i) . ' = ""'
+    endfor
+
+    " Clear numbered registers 1 to 9
+    for i in range(1, 9)
+        execute 'let @' . i . ' = ""'
+    endfor
+
+    " Clear specific special registers
+    let @0 = ''
+    let @+ = ''
+    let @* = ''
+    let @" = ''
+    let @- = ''
+    let @# = ''  " Might be read-only, but we attempt for completeness
+    let @= = ''  " Expression register
+    let @/ = ''
+
+    " Skip clearing % register as it is read-only and contains the current file name
+endfunction
+
+command! ClearYanks call ClearYankRegisters()
+]])
