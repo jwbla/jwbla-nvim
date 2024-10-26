@@ -23,7 +23,10 @@ return require('lazy').setup({
     spec = {
         { import = "jwbla.plugins" },
     },
-    checker = { enabled = true },
+    checker = {
+        enabled = true,
+        notify = false
+    },
     change_detection = { notify = false },
 --    use( 'nvim-tree/nvim-tree.lua' )
 --    use( 'nvim-tree/nvim-web-devicons' )
