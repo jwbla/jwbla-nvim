@@ -14,3 +14,6 @@ vim.api.nvim_set_keymap("n", "<M-s>", "<C-W>-", { noremap = true, silent = true 
 
 -- This is just for fun
 vim.api.nvim_set_keymap("n", "<leader>fu", "<cmd>CellularAutomaton make_it_rain<CR>", { noremap = true, silent = true})
+
+-- Git blame
+vim.api.nvim_set_keymap("n", "<leader>gb", ":Git blame<CR>", { noremap = true, silent = true})
