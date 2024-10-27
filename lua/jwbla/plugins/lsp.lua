@@ -36,8 +36,8 @@ return {
                 "yamlls",
                 "bashls",
                 "sqlls",
-                "cmake"
-
+                "cmake",
+                "codelldb",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
