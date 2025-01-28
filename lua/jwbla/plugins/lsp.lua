@@ -21,6 +21,7 @@ return {
         {},
         vim.lsp.protocol.make_client_capabilities(),
         cmp_lsp.default_capabilities())
+        local luasnip = require("luasnip")
 
         require("fidget").setup({})
         require("mason").setup()
@@ -91,6 +92,24 @@ return {
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
+                
+                -- Jump forward in snippet placeholders
+                ["<Tab>"] = cmp.mapping(function(fallback)
+                    if luasnip.jumpable(1) then
+                        luasnip.jump(1)
+                    else
+                        fallback()
+                    end
+                end, { "i", "s" }),
+        
+                -- Jump backward in snippet placeholders
+                ["<S-Tab>"] = cmp.mapping(function(fallback)
+                    if luasnip.jumpable(-1) then
+                        luasnip.jump(-1)
+                    else
+                        fallback()
+                    end
+                end, { "i", "s" }),
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
