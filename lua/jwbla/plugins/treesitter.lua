@@ -26,7 +26,15 @@ return {
                 enable = true,
                 additional_vim_regex_highlighting = false,
             },
+
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = "<C-Up>",       -- Start selection
+                    node_incremental = "<C-Up>",     -- Expand selection
+                    node_decremental = "<C-Down>",   -- Shrink selection
+                },
+            },
         })
     end
 }
-
