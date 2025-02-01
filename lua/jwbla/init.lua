@@ -23,6 +23,13 @@ autocmd('LspAttach', {
     end
 })
 
+-- Move selected lines up
+vim.api.nvim_set_keymap('v', '<A-j>', ":move '<-2<CR>gv=gv", { noremap = true, silent = true })
+
+-- Move selected lines down
+vim.api.nvim_set_keymap('v', '<A-k>', ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
+
+
 vim.cmd([[
 function! ClearYankRegisters()
     " Clear alphabetic registers a to z
