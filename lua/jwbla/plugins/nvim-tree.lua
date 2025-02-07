@@ -1,4 +1,6 @@
-return {}
+return {
+    "nvim-tree/nvim-tree.lua"
+}
 -- local setup, nvimtree = pcall(require, "nvim-tree")
 -- if not setup then return end
 -- 
