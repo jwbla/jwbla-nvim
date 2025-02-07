@@ -17,3 +17,30 @@ vim.api.nvim_set_keymap("n", "<leader>fu", "<cmd>CellularAutomaton make_it_rain<
 
 -- Git blame
 vim.api.nvim_set_keymap("n", "<leader>gb", ":Git blame<CR>", { noremap = true, silent = true})
+
+
+
+function RunSelectionInFTerm()
+  local start_line, start_col = vim.fn.getpos("'<")[2], vim.fn.getpos("'<")[3]
+  local end_line, end_col = vim.fn.getpos("'>")[2], vim.fn.getpos("'>")[3]
+
+  -- Get selected text
+  local lines = vim.api.nvim_buf_get_lines(0, start_line - 1, end_line, false)
+  if #lines == 0 then return end
+
+  -- If only one line, respect start and end columns
+  if #lines == 1 then
+    lines[1] = string.sub(lines[1], start_col, end_col)
+  end
+
+  -- Join lines and trim whitespace
+  local command = table.concat(lines, "\n"):gsub("^%s*(.-)%s*$", "%1")
+
+  if command == "" then return end
+
+  -- Run in FTerm
+  require("FTerm").scratch({ cmd = command })
+end
+
+-- Map it to a keybinding in visual mode
+vim.api.nvim_set_keymap("v", "<leader>r", ":lua RunSelectionInFTerm()<CR>", { noremap = true, silent = true })
