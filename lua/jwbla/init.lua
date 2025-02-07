@@ -29,6 +29,12 @@ vim.api.nvim_set_keymap('v', '<A-k>', ":move '<-2<CR>gv=gv", { noremap = true, s
 -- Move selected lines down
 vim.api.nvim_set_keymap('v', '<A-j>', ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
 
+-- Horizontal Split
+vim.keymap.set('n', '<C-S-\\>', ':split<CR>', { noremap = true, silent = true })
+
+-- Vertical Split (ala vscode)
+vim.keymap.set('n', '<C-\\>', ':vsplit<CR>', { noremap = true, silent = true })
+
 
 vim.cmd([[
 function! ClearYankRegisters()
