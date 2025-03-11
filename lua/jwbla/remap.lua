@@ -44,3 +44,20 @@ end
 
 -- Map it to a keybinding in visual mode
 vim.api.nvim_set_keymap("v", "<leader>r", ":lua RunSelectionInFTerm()<CR>", { noremap = true, silent = true })
+
+function JSReplFTerm()
+  local filetype = vim.bo.filetype
+  local filename = vim.fn.expand("%:p") -- Get full path of the current file
+
+  if filetype == "javascript" and vim.fn.filereadable(filename) == 1 then
+    -- If inside a .js file, run the file
+    require("FTerm").scratch({ cmd = "node " .. vim.fn.shellescape(filename) })
+  else
+    -- Otherwise, open the Node.js REPL
+    require("FTerm").scratch({ cmd = "node" })
+  end
+end
+
+vim.api.nvim_set_keymap("n", "<leader>js", ":lua JSReplFTerm()<CR>", { noremap = true, silent = true })
+
+
