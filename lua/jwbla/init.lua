@@ -63,3 +63,5 @@ endfunction
 
 command! ClearYanks call ClearYankRegisters()
 ]])
+
+require('overseer').setup();
