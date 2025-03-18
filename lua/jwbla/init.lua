@@ -65,9 +65,4 @@ command! ClearYanks call ClearYankRegisters()
 ]])
 
 require('overseer').setup();
-vim.api.nvim_set_keymap("x", "(", "c(<C-r>\")<Esc>gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("x", "{", "c{<C-r>\"}<Esc>gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("x", "[", "c[<C-r>\"]<Esc>gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("x", "\"", "c\"<C-r>\"\"<Esc>gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("x", "'", "c'<C-r>\"'<Esc>gv", { noremap = true, silent = true })
 
