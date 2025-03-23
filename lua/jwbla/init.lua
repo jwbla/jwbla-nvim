@@ -1,7 +1,7 @@
 require("jwbla.remap")
 require("jwbla.set")
 require("jwbla.lazy")
-require("jwbla.dap_config")
+require("jwbla.dap-conf.dap_conf_cpp_linux")
 
 require 'colorizer'.setup()
 local autocmd = vim.api.nvim_create_autocmd
