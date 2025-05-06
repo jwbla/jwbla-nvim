@@ -1,0 +1,4 @@
+return
+{
+    'wangfanstar/vim-hidecomments'
+}
