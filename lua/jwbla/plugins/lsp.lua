@@ -92,7 +92,7 @@ return {
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
-                
+
                 -- Jump forward in snippet placeholders
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if luasnip.jumpable(1) then
@@ -101,7 +101,7 @@ return {
                         fallback()
                     end
                 end, { "i", "s" }),
-        
+
                 -- Jump backward in snippet placeholders
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if luasnip.jumpable(-1) then
