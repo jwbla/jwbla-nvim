@@ -18,7 +18,7 @@ vim.api.nvim_set_keymap("n", "<leader>fu", "<cmd>CellularAutomaton make_it_rain<
 -- Git blame
 vim.api.nvim_set_keymap("n", "<leader>gb", ":Git blame<CR>", { noremap = true, silent = true})
 
-
+vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>HideComments<CR>", { noremap = true, silent = true})
 
 function RunSelectionInFTerm()
   local start_line, start_col = vim.fn.getpos("'<")[2], vim.fn.getpos("'<")[3]
