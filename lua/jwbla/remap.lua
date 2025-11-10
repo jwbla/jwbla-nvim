@@ -18,6 +18,7 @@ vim.api.nvim_set_keymap("n", "<leader>fu", "<cmd>CellularAutomaton make_it_rain<
 -- Git blame
 vim.api.nvim_set_keymap("n", "<leader>gb", ":Git blame<CR>", { noremap = true, silent = true})
 
+-- ToggleComments
 vim.api.nvim_set_keymap("n", "<leader>/", "<cmd>HideComments<CR>", { noremap = true, silent = true})
 
 function RunSelectionInFTerm()
