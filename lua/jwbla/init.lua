@@ -1,7 +1,6 @@
 require("jwbla.remap")
 require("jwbla.set")
 require("jwbla.lazy")
-require("jwbla.dap-conf.dap_conf_cpp_linux")
 
 require 'colorizer'.setup()
 local autocmd = vim.api.nvim_create_autocmd
@@ -37,14 +36,6 @@ vim.keymap.set('n', '<C-S-\\>', ':split<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-\\>', ':vsplit<CR>', { noremap = true, silent = true })
 
 require('overseer').setup();
-
-vim.keymap.set('n', '<F5>', function() require'dap'.continue() end)
-vim.keymap.set('n', '<F10>', function() require'dap'.step_over() end)
-vim.keymap.set('n', '<F11>', function() require'dap'.step_into() end)
-vim.keymap.set('n', '<F12>', function() require'dap'.step_out() end)
-vim.keymap.set('n', '<leader>db', function() require'dap'.toggle_breakpoint() end)
-vim.keymap.set('n', '<leader>dc', function() require'dap'.clear_breakpoints() end)
-
 
 -- bind gltf to json
 vim.filetype.add({
