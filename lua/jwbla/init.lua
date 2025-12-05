@@ -35,6 +35,9 @@ vim.keymap.set('n', '<C-S-\\>', ':split<CR>', { noremap = true, silent = true })
 -- Vertical Split (ala vscode)
 vim.keymap.set('n', '<C-\\>', ':vsplit<CR>', { noremap = true, silent = true })
 
+-- ctrl+backspace deletes word in insert mode
+vim.keymap.set('i', '<C-h>', '<C-w>')
+
 require('overseer').setup();
 
 -- bind gltf to json
