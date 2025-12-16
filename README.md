@@ -7,3 +7,4 @@ curl -LO https://github.com/neovim/deps/raw/21c5e8bdda33521a6ed497b315e03265a278
 ```
 ## Wishlist
 * Tree based visualization of search results ala VSCode
+* Reexamine nvim-tree
