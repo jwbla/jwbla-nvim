@@ -46,3 +46,16 @@ vim.filetype.add({
         gltf = "json"
     },
 })
+
+-- create word wrap macro
+vim.api.nvim_create_user_command('WordWrap', function()
+  if vim.wo.wrap and vim.wo.linebreak then
+    vim.wo.wrap = false
+    vim.wo.linebreak = false
+    print("Word Wrap: off")
+  else
+    vim.wo.wrap = true
+    vim.wo.linebreak = true
+    print("Word Wrap: on")
+  end
+end, { bang = false, bar = true })
