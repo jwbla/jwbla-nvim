@@ -1,6 +1,7 @@
 require("jwbla.remap")
 require("jwbla.set")
 require("jwbla.lazy")
+require("jwbla.treesitter")
 
 require 'colorizer'.setup()
 local autocmd = vim.api.nvim_create_autocmd
