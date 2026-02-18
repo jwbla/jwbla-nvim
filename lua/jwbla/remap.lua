@@ -6,6 +6,11 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+-- CTRL+SHIFT+HJKL to swap windows in direction
+vim.api.nvim_set_keymap("n", "<C-S-h>", "<C-w>H", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-j>", "<C-w>J", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-k>", "<C-w>K", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-S-l>", "<C-w>L", { noremap = true, silent = true })
 -- This block remaps ALT+,.ts to resize windows
 vim.api.nvim_set_keymap("n", "<M-,>", "<c-w>5<", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<M-.>", "<c-w>5>", { noremap = true, silent = true })
